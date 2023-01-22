@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: 1px solid black;
+    padding: 0px 16px 8px 16px;
+margin-top: 32px;
+}
+
+.box h2 {
+    border: 1px solid black;
+    background-color: white;
+    margin-top: -12px;
+    border-radius: 20px;
+    padding-left: 16px;
+    font-size: 20px;
+}
+
+.d-flex {
+    display: flex;    
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+.even {
+    justify-content: space-evenly;
+}
+
+.mr {
+    padding-right: 32px;
+}
+
+.mt {
+margin-top: 16px;
+}

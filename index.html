@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcConv</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="bmi.js"></script>
+    <script src="celsius.js"></script>
+    <script src="time.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>CalcConv</h1>
+
+        <div class="box"> 
+            <h2>BMI</h2>
+            <form onsubmit="renderBMI(); return false">
+                <input type="number" step=".01" id="size" placeholder="1.85 (in meter)">
+                <input type="number" id="weight" placeholder="80 (in kg)">
+                <button>Calculate</button>
+            </form>
+            <div id="resultBMI"></div>
+        </div>
+
+        <div class="box">
+            <h2>Fahrenheit / Celsius</h2>
+            <form onsubmit="renderCelsius(); return false">
+                <input type="number" id="fahrenheit" placeholder="84 (in °F)">
+                <button>Convert</button>
+            </form>
+            <div id="resultCelsius"></div>
+        </div>
+
+        <div class="box">
+            <h2>Time conversion</h2>
+            <form class="d-flex flex-col" onsubmit="renderTime(); return false;">
+                <div class="d-flex between">
+                    <div class="mr">Years</div><input type="number" min="0,0000000001" id="years">
+                </div>
+                <div class="d-flex between">
+                    <div class="mr">Weeks</div><input type="number" min="0" id="weeks">
+                </div>
+                <div class="d-flex between">
+                    <div class="mr">Days</div><input type="number" min="0" id="days">
+                </div>
+                <div class="d-flex between">
+                    <div class="mr">Hours</div><input type="number" min="0" id="hours">
+                </div>
+                <div class="d-flex space">
+                    <div class="mr">Minutes</div><input type="number" min="0" id="minutes">
+                </div>
+                <div class="d-flex between">
+                    <div class="mr">Seconds</div><input type="number" min="0" id="seconds">
+                </div>
+                <div class="d-flex even mt"><button>Calculate</button><button onclick="resetAll(); return false">Reset</button></div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
