@@ -7,26 +7,25 @@ let data = [
   { name: "seconds", id: "seconds" },
 ];
 
-
 function renderTime(selection) {
   if (selection === "years") {
-  renderByYears();
-}
+    renderByYears();
+  }
   if (selection === "weeks") {
-  renderByWeeks();
-}
-if (selection === "days") {
-  renderByDays();
-}
+    renderByWeeks();
+  }
+  if (selection === "days") {
+    renderByDays();
+  }
   if (selection === "hours") {
-  renderByHours();
-}
-if (selection === "minutes") {
-  renderByMinutes();
-}
+    renderByHours();
+  }
+  if (selection === "minutes") {
+    renderByMinutes();
+  }
   if (selection === "seconds") {
-  renderBySeconds();
-}
+    renderBySeconds();
+  }
 }
 
 // By years
@@ -100,36 +99,36 @@ function calculateByHours(hours) {
 // By minutes
 
 function renderByMinutes() {
-    let minutes = document.getElementById("minutes").value;
-    calculateByMinutes(minutes);
-    renderResults();
-  }
-  
-  function calculateByMinutes(minutes) {
-    data[0].result = +parseFloat(minutes / (60 * 24 * 365)).toFixed(8); // years
-    data[1].result = +parseFloat(minutes / (60 * 24 * 7)).toFixed(8); // weeks
-    data[2].result = +parseFloat(minutes / (60 * 24)).toFixed(8); // days
-    data[3].result = +parseFloat(minutes / 60).toFixed(8); // hours
-    data[4].result = +parseFloat(minutes * 1).toFixed(8); // minutes
-    data[5].result = +parseFloat(minutes * 60).toFixed(8); // seconds
-  }
+  let minutes = document.getElementById("minutes").value;
+  calculateByMinutes(minutes);
+  renderResults();
+}
 
-  // By seconds
+function calculateByMinutes(minutes) {
+  data[0].result = +parseFloat(minutes / (60 * 24 * 365)).toFixed(8); // years
+  data[1].result = +parseFloat(minutes / (60 * 24 * 7)).toFixed(8); // weeks
+  data[2].result = +parseFloat(minutes / (60 * 24)).toFixed(8); // days
+  data[3].result = +parseFloat(minutes / 60).toFixed(8); // hours
+  data[4].result = +parseFloat(minutes * 1).toFixed(8); // minutes
+  data[5].result = +parseFloat(minutes * 60).toFixed(8); // seconds
+}
+
+// By seconds
 
 function renderBySeconds() {
-    let seconds = document.getElementById("seconds").value;
-    calculateBySeconds(seconds);
-    renderResults();
-  }
-  
-  function calculateBySeconds(seconds) {
-    data[0].result = +parseFloat(seconds / (60 * 60 * 24 * 365)).toFixed(8); // years
-    data[1].result = +parseFloat(seconds / (60 * 60 * 24 * 7)).toFixed(8); // weeks
-    data[2].result = +parseFloat(seconds / (60 * 60 * 24)).toFixed(8); // days
-    data[3].result = +parseFloat(seconds / (60 * 60)).toFixed(8); // hours
-    data[4].result = +parseFloat(seconds / 60).toFixed(8); // minutes
-    data[5].result = +parseFloat(seconds * 1).toFixed(8); // seconds
-  }
+  let seconds = document.getElementById("seconds").value;
+  calculateBySeconds(seconds);
+  renderResults();
+}
+
+function calculateBySeconds(seconds) {
+  data[0].result = +parseFloat(seconds / (60 * 60 * 24 * 365)).toFixed(8); // years
+  data[1].result = +parseFloat(seconds / (60 * 60 * 24 * 7)).toFixed(8); // weeks
+  data[2].result = +parseFloat(seconds / (60 * 60 * 24)).toFixed(8); // days
+  data[3].result = +parseFloat(seconds / (60 * 60)).toFixed(8); // hours
+  data[4].result = +parseFloat(seconds / 60).toFixed(8); // minutes
+  data[5].result = +parseFloat(seconds * 1).toFixed(8); // seconds
+}
 
 // General functions
 
@@ -141,8 +140,6 @@ function renderResults() {
 
     elementName = document.getElementById(elementID);
     elementName.value = elementResult;
-
-    console.log(elementResult);
   }
 }
 
