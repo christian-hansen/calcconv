@@ -1,3 +1,33 @@
+body {
+    margin: 0;
+}
+
+header,
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    padding: 0 10% 0 10%;
+    height: 64px;
+}
+
+footer {
+    margin-top: 32px;
+}
+
+h1 {
+    margin: 0;
+}
+
+nav,
+.foot {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -5,10 +35,13 @@ main {
     align-items: center;
 }
 
+
+
 .box {
     border: 1px solid black;
     padding: 0px 16px 8px 16px;
-margin-top: 32px;
+    margin-top: 32px;
+    min-width: 30%;
 }
 
 .box h2 {
@@ -21,7 +54,7 @@ margin-top: 32px;
 }
 
 .d-flex {
-    display: flex;    
+    display: flex;
 }
 
 .flex-col {
@@ -41,7 +74,11 @@ margin-top: 32px;
 }
 
 .mt {
-margin-top: 8px;
+    margin-top: 8px;
+}
+
+.bold {
+    font-weight: 800;
 }
 
 button {
@@ -51,4 +88,13 @@ button {
 
 button:hover {
     background-color: lightgray;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+.top-link {
+    text-decoration: none;
+    color: inherit;
 }

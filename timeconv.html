@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalcConvert</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/bmi.js"></script>
-    <script src="js/celsius.js"></script>
+    <script src="script.js"></script>
     <script src="js/time.js"></script>
+
 </head>
 
 <body>
+    <header w3-include-html="./html/header.html">
+    </header>
     <main>
             <div class="box">
             <h2>Time conversion</h2>
@@ -29,7 +31,7 @@
                 <div class="d-flex between">
                     <div class="mr">Hours</div><input type="number" min="0" id="hours" onchange="renderTime('hours')">
                 </div>
-                <div class="d-flex space">
+                <div class="d-flex between">
                     <div class="mr">Minutes</div><input type="number" min="0" id="minutes" onchange="renderTime('minutes')">
                 </div>
                 <div class="d-flex between">
@@ -41,6 +43,9 @@
             </form>
         </div>
     </main>
+    <script>
+        includeHTML();
+        </script>
 </body>
 
 </html>

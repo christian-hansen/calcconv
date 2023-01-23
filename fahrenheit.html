@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CalcConvert</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="bmi.js"></script>
+    <script src="script.js"></script>
     <script src="celsius.js"></script>
-    <script src="time.js"></script>
 </head>
 
 <body>
+    <header w3-include-html="./html/header.html">
+    </header>
     <main>
         <div class="box">
             <h2>Fahrenheit / Celsius</h2>
@@ -20,9 +21,12 @@
                 <input type="number" id="fahrenheit" placeholder="84 (in °F)">
                 <button>Convert</button>
             </form>
-            <div id="resultCelsius"></div>
+            <div class="mt bold" id="resultCelsius"></div>
         </div>
     </main>
+    <script>
+        includeHTML();
+        </script>
 </body>
 
 </html>
