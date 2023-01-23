@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcConvert</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bmi.js"></script>
+    <script src="js/celsius.js"></script>
+    <script src="js/time.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="box"> 
+            <h2>BMI</h2>
+            <form class="d-flex flex-col" onsubmit="renderBMI(); return false">
+                <input type="number" step=".01" id="size" placeholder="1.85 (in meter)">
+                <input type="number" id="weight" placeholder="80 (in kg)">
+                <button class="mt">Calculate</button>
+            </form>
+            <div id="resultBMI"></div>
+        </div>
+    </main>
+</body>
+
+</html>

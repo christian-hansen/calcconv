@@ -14,28 +14,7 @@
 
 <body>
     <main>
-        <h1>CalcConv</h1>
-
-        <div class="box"> 
-            <h2>BMI</h2>
-            <form class="d-flex flex-col" onsubmit="renderBMI(); return false">
-                <input type="number" step=".01" id="size" placeholder="1.85 (in meter)">
-                <input type="number" id="weight" placeholder="80 (in kg)">
-                <button class="mt">Calculate</button>
-            </form>
-            <div id="resultBMI"></div>
-        </div>
-
-        <div class="box">
-            <h2>Fahrenheit / Celsius</h2>
-            <form onsubmit="renderCelsius(); return false">
-                <input type="number" id="fahrenheit" placeholder="84 (in °F)">
-                <button>Convert</button>
-            </form>
-            <div id="resultCelsius"></div>
-        </div>
-
-        <div class="box">
+            <div class="box">
             <h2>Time conversion</h2>
             <form class="d-flex flex-col" onsubmit="return false">
                 <div class="d-flex between">

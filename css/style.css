@@ -41,5 +41,14 @@ margin-top: 32px;
 }
 
 .mt {
-margin-top: 16px;
+margin-top: 8px;
+}
+
+button {
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+button:hover {
+    background-color: lightgray;
 }

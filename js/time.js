@@ -8,14 +8,25 @@ let data = [
 ];
 
 
-//TODO wenn years selected, dann byYears, usw
-function renderTime() {
-  // renderByYears();
-  // renderByWeeks();
-  // renderByDays();
-//   renderByHours();
-//   renderByMinutes();
+function renderTime(selection) {
+  if (selection === "years") {
+  renderByYears();
+}
+  if (selection === "weeks") {
+  renderByWeeks();
+}
+if (selection === "days") {
+  renderByDays();
+}
+  if (selection === "hours") {
+  renderByHours();
+}
+if (selection === "minutes") {
+  renderByMinutes();
+}
+  if (selection === "seconds") {
   renderBySeconds();
+}
 }
 
 // By years
