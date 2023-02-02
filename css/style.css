@@ -103,3 +103,16 @@ nav a, .foot a {
 input {
     margin-bottom: 8px;
 }
+
+.calculator input {
+    margin-bottom: 8px;
+    min-height: 32px;
+    min-width: 50px;
+    max-width: 160px;
+}
+
+#result {padding: 0px 4px;}
+
+.calc-reset {
+    padding: 8px;
+}

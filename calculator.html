@@ -15,16 +15,16 @@
     <header w3-include-html="./html/header.html">
     </header>
     <main>
-        <table id="calcu">
+        <table class="calculator mt" id="calcu">
             <tr>
-                <td colspan="3"><input type="text" id="result"></td>
+                <form onsubmit="solve();return false"><td colspan="3"><input type="text" id="result" ></td></form>
                 <!-- clr() function will call clr to clear all value -->
-                <td><input type="button" value="c" onclick="reset()" /> </td>
+                <td><input class="calc-reset" type="button" value="C" onclick="reset()" /> </td>
             </tr>
             <tr>
                 <!-- create button and assign value to each button -->
                 <!-- display("1") will call function display to display value -->
-                <td><input type="button" value="1" onclick="display('1')" 
+                <td class="calc-btn"><input type="button" value="1" onclick="display('1')" 
                             onkeydown="type(event)"> </td>
                 <td><input type="button" value="2" onclick="display('2')" 
                             onkeydown="type(event)"> </td>
@@ -65,6 +65,7 @@
                             onkeydown="type(event)"> </td>
             </tr>
         </table>
+    </main>
     <footer w3-include-html="./html/footer.html">
     </footer>
     <script>
