@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalcConvert</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+    <script src="./js/calculator.js"></script>
+</head>
+
+<body>
+    <header w3-include-html="./html/header.html">
+    </header>
+    <main>
+        <table id="calcu">
+            <tr>
+                <td colspan="3"><input type="text" id="result"></td>
+                <!-- clr() function will call clr to clear all value -->
+                <td><input type="button" value="c" onclick="reset()" /> </td>
+            </tr>
+            <tr>
+                <!-- create button and assign value to each button -->
+                <!-- display("1") will call function display to display value -->
+                <td><input type="button" value="1" onclick="display('1')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="2" onclick="display('2')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="3" onclick="display('3')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="/" onclick="display('/')" 
+                            onkeydown="type(event)"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="display('4')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="5" onclick="display('5')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="6" onclick="display('6')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="*" onclick="display('*')" 
+                            onkeydown="type(event)"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="display('7')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="8" onclick="display('8')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="9" onclick="display('9')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="-" onclick="display('-')"
+                            onkeydown="type(event)"> </td>
+            </tr>
+            <tr>
+                <td><input type="button" value="0" onclick="display('0')" 
+                            onkeydown="type(event)"> </td>
+                <td><input type="button" value="." onclick="display('.')" 
+                            onkeydown="type(event)"> </td>
+                <!-- solve function call function solve to evaluate value -->
+                <td><input type="button" value="=" onclick="solve()"> </td>
+      
+                <td><input type="button" value="+" onclick="display('+')" 
+                            onkeydown="type(event)"> </td>
+            </tr>
+        </table>
+    <footer w3-include-html="./html/footer.html">
+    </footer>
+    <script>
+        includeHTML();
+        </script>
+</body>
+
+</html>
